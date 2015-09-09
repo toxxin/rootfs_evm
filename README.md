@@ -1,4 +1,4 @@
-# Collection of scripts to build rootfs, based on Debian wheezy.
+# Collection of scripts to build rootfs, based on Debian jessie.
 
 ###Tested on Ubuntu 14.04
 
