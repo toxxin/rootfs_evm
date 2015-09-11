@@ -52,4 +52,4 @@ echo proc /proc proc defaults 0 0 >> $filename
 #LC_ALL=C LANGUAGE=C LANG=C chroot $TARGET_ROOTFS_DIR apt-get clean
 
 #echo "Remove Qemu..."
-#rm $TARGET_ROOTFS_DIR/usr/bin/qemu-arm-static
+rm $TARGET_ROOTFS_DIR/usr/bin/qemu-arm-static
