@@ -43,13 +43,10 @@ echo proc /proc proc defaults 0 0 >> $filename
 
 #Add the standard Debian non-free repositories useful to load
 #closed source firmware (i.e. WiFi dongle firmware)
-#filename=$TARGET_ROOTFS_DIR/etc/apt/sources.list
-#echo deb http://http.debian.net/debian/ jessie main contrib non-free > $filename
+filename=$TARGET_ROOTFS_DIR/etc/apt/sources.list
+echo deb http://http.debian.net/debian/ jessie main contrib non-free > $filename
 
 #echo "Update packages"
-#LC_ALL=C LANGUAGE=C LANG=C chroot $TARGET_ROOTFS_DIR apt-get update
-#LC_ALL=C LANGUAGE=C LANG=C chroot $TARGET_ROOTFS_DIR apt-get upgrade
-#LC_ALL=C LANGUAGE=C LANG=C chroot $TARGET_ROOTFS_DIR apt-get clean
-
-#echo "Remove Qemu..."
-rm $TARGET_ROOTFS_DIR/usr/bin/qemu-arm-static
+LC_ALL=C LANGUAGE=C LANG=C chroot $TARGET_ROOTFS_DIR apt-get update
+LC_ALL=C LANGUAGE=C LANG=C chroot $TARGET_ROOTFS_DIR apt-get upgrade
+LC_ALL=C LANGUAGE=C LANG=C chroot $TARGET_ROOTFS_DIR apt-get clean
